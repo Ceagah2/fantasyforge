@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
+import NavBar from "./NavBar";
+import PrivacyPolicy from "./Privacy";
+import TermsOfUse from "./TermsOfUse";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const TermsAndPrivacy: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div style={{width: '100vw', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
+      <header className="header">
+        <div className="container">
+          <h1>Pro-Bidder</h1>
+          <p>Simplificando orçamentos, conquistando mais clientes</p>
+        </div>
+      </header>
 
-export default App
+      <NavBar />
+
+      <main className="container">
+        <section id="terms">
+        <TermsOfUse />
+        </section>
+
+        <section id="privacy">
+         <PrivacyPolicy />
+        </section>
+      </main>
+
+      <footer className="container footer">
+        <p>
+          &copy; 2024 Fantasy Forge Tecnologias. Todos os direitos reservados.
+        </p>
+        <p>
+          Entre em contato:{" "}
+          <a href="mailto:dev.ceagah@gmail.com">dev.ceagah@gmail.com</a>
+        </p>
+      </footer>
+    </div>
+  );
+};
+
+export default TermsAndPrivacy;
