@@ -137,6 +137,9 @@ const TermsOfUse: React.FC = () => {
           referida região.
         </p>
       </section>
+      <a href="/terms.pdf" download className="download-button">
+        Baixar Termos de Uso (PDF)
+      </a>
     </div>
   );
 };

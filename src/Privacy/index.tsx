@@ -144,6 +144,9 @@ const PrivacyPolicy: React.FC = () => {
           <a href="mailto:dev.ceagah@gmail.com">dev.ceagah@gmail.com</a>
         </p>
       </section>
+      <a href="/privacy.pdf" download className="download-button">
+        Baixar Termos de Privacidade (PDF)
+      </a>
     </div>
   );
 };
